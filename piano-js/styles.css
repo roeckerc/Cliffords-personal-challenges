@@ -1,0 +1,104 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+  #canvas{
+    position: absolute;
+    background-color: #000;
+  }
+/* align-itmes & jestify-content will not work without display flex */
+/* and align-itmes will not work without the height */
+/* initially had align-content, but it was up at the top of the page, switched to items, perfect */
+
+/* using the # to call on an id */
+#piano {
+    height: 290px;
+    padding: 90px 30px 0 30px;
+    /* ^ top left bottom right ^*/
+    background-color: #fc8989;
+    border-radius: 10px;
+    position: absolute;
+}
+.number {
+    position:absolute;
+    margin-top: 220px;
+    margin-left: 28px;
+}
+.numberz {
+    position:absolute;
+    margin-top: 220px;
+    margin-left: 22px;
+}
+/* using . for class just like # of id */
+.keys {
+    position: relative;
+}
+/*  using the .keys class for the positioning */
+
+/* adding display flex makes all the white keys next to eachother */
+.white-keys {
+    display: flex;
+}
+/* using position relative because i will have to move them around */
+.black-keys {
+    position: relative;
+    display: flex;
+}
+
+.white-key {
+    width: 68px;
+    height: 280px;
+    background-color: #fff;
+    /* #fff; is shorthand for white */
+    border-radius: 0 0 5px 5px;
+    border: solid #000 2px;
+    /* #fff; is shorthand for black */
+    box-sizing: border-box;
+}
+
+/* doing position absolute because im going to have to position inside of black keys
+which has a position relative to keys */
+.black-key {
+    width: 38px;
+    height: 160px;
+    border-radius: 0 0 5px 5px;
+    box-sizing: border-box;
+    position: absolute;
+    background-color: #000;
+}
+
+.black-key:nth-child(1) {
+    left: 48px;
+}
+.black-key:nth-child(2) {
+    left: 116px;
+}
+.black-key:nth-child(3) {
+    left: 252px;
+}
+.black-key:nth-child(4) {
+    left: 320px;
+}
+.black-key:nth-child(5) {
+    left: 388px;
+}
+.black-key:nth-child(6) {
+    left: 524px;
+}
+.black-key:nth-child(7) {
+    left: 592px;
+}
+.black-key:nth-child(8) {
+    left: 660px;
+}
+.black-key:nth-child(9) {
+    left: 796px;
+}
+.black-key:nth-child(10) {
+    left: 864px;
+}
